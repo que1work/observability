@@ -4,7 +4,6 @@ const client = require('prom-client');
 const app = express();
 const register = client.register;
 
-// Створимо базові метрики
 const httpRequestDurationMicroseconds = new client.Histogram({
   name: 'http_request_duration_ms',
   help: 'Duration of HTTP requests in ms',
